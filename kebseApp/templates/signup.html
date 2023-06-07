@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+<form action="" method="post" name="signup" style="width: 100%; height: 90%; position: absolute; top: 46px; left: 0; overflow: auto;">
+    {{ form.hidden_tag() }}
+    <div style="width: 250px;
+    height: 250px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;">
+        <h1>Sign Up</h1>
+        <p>{{ form.username( placeholder = "Username") }}</p>
+        <p>{{ form.email( placeholder = "Email") }}</p>
+        <p>{{ form.password( placeholder = "Password") }}</p>
+        <p>{{ form.confirm_password( placeholder = "Confirm Password") }}</p>
+        <p><input type="submit" class="btn btn-outline-success" value="Sign Up"></p>
+    </div>
+</form>
+{% endblock %}
